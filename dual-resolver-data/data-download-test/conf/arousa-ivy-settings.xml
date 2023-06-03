@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivysettings>
+
+  <property name="dual-example-repository-path"
+	    value="${user.home}/dev/ws/arousaws/arousa-examples/examples/dual-resolver-data/repository"
+	    override="true" />
+
+  <settings defaultResolver="dual-example"/>
+  <resolvers>
+    <dual name="dual-example">
+      <filesystem name="ivys">
+	<ivy pattern="${dual-example-repository-path}/[module]-ivy-[revision].xml"/>
+      </filesystem>
+      <url name="two-patterns-example">
+	<artifact pattern="http://aiweb.cs.washington.edu/research/projects/xmltk/xmldata/data/[module]/[artifact].[ext]"/>
+
+<!--
+http://aiweb.cs.washington.edu/research/projects/xmltk/xmldata/data/tpc-h/customer.xml
+-->
+      </url>
+    </dual>
+  </resolvers>
+</ivysettings>
+

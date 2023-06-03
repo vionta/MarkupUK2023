@@ -1,0 +1,9 @@
+
+      # Version 1.0 published to demo (20230603142058)
+
+      Dependency hint
+    <dependency org="org.markupuk.examples.arousa" name="sample-bold-transformation" rev="1.0" >
+      <artifact name="sample-bold-transformation" type="transformations" ext="zip" />
+    </dependency>
+    .............................................................. 
+    

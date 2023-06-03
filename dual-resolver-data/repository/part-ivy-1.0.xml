@@ -1,0 +1,26 @@
+<ivy-module version="1.1">
+  
+  <!--  ...... Enter the group and name of the project ... -->
+  <info organisation="edu.washington.cs.aiweb.tpc-h"
+	revision="1.0" module="tpc-h"/>
+  <!-- Data from
+       http://aiweb.cs.washington.edu/research/projects/xmltk/xmldata/data/tpc-h/customer.xml
+  -->
+  
+  <configurations>
+    <conf name="default" />
+  </configurations>
+
+  <publications>
+    <artifact name="part" type="data" ext="xml" conf="default" />
+  </publications>
+
+  <dependencies>
+    <dependency org="edu.washington.cs.aiweb.tpc-h" name="tpc-h" rev="1.0" >
+      <artifact name="part" type="data" ext="xml" />
+    </dependency>
+
+
+  </dependencies>
+  
+</ivy-module>

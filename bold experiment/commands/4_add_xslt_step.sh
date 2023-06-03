@@ -1,0 +1,1 @@
+cp ../commands/build.xml .

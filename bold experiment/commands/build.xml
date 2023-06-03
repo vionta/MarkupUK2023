@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="bold-experiment" basedir="." default="build">
+
+  <!-- Arousa Configuration directory -->
+  <property name="config.dir" value="conf"></property>
+
+  <!-- Main build properties -->
+  <property file="${config.dir}/build.properties" ></property>
+
+  <!-- Arousa build properties -->  
+  <import file="${config.dir}/arousa-build.xml" />
+
+  <!-- Xproc Import -->
+  <!-- XProc III Import 
+       Enable this import and adjust the Morgana XProc III Path 
+       in order to use xproc III
+       <import file="${config.dir}/xproc.xml" /> 
+  -->
+  
+  <!-- 
+       XProc I with NW Calabash
+       <import file="${config.dir}/calabash.xml"/>
+       Curl Helper macros 
+       <import file="${config.dir}/curl.xml"/>
+  -->
+
+  <target name="help"  >
+    <echo>
+      Main Targets : clean, build 
+    </echo>
+  </target>
+
+  <target name="clean"  >
+    <echo>
+      Cleaning ....... (add your cleaning steps here)
+    </echo>
+  </target>  
+  
+  <target name="build" >
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+    <xslt style="deps/sample-bold-transformation/xsl/bold-demo.xsl"
+	  basedir="test/data"
+	  destdir="build" 
+	  includes="*.xml"
+	  extension=".xml"
+	  />
+
+    <xslt style="deps/html-essentials/xsl/html-report-basic-structure.xsl"
+	  basedir="build"
+	  destdir="build" 
+	  includes="*.xml"
+	  extension=".html"
+	  />
+
+    
+  </target>
+  
+  <target name="package" >
+    <antcall target="arousa-package" />
+  </target>
+
+  <target name="dist" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="package" />
+    <antcall target="arousa-publish-dependency" />
+  </target>
+</project>
+
