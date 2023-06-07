@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lineal-fods" basedir="." default="build">
+
+  <!-- Arousa Configuration directory -->
+  <property name="config.dir" value="conf"></property>
+
+  <!-- Main build properties -->
+  <property file="${config.dir}/build.properties" ></property>
+
+  <!-- Arousa build properties -->  
+  <import file="${config.dir}/arousa-build.xml" />
+
+  <!-- Xproc Import III  -->
+  <import file="${config.dir}/xproc.xml" /> 
+  
+  <!-- 
+       <import file="${system.ant.config.dir}/curl.xml"/>
+  -->
+  <!-- Calabash 1.x build file 
+       Import of xproc 1.0 / Calabash tasks and macros
+  -->
+  <import file="${config.dir}/calabash.xml"/>
+  
+  <target name="help"  >
+    <echo>
+      Main Targets : clean, build 
+    </echo>
+  </target>
+
+  <target name="clean"  >
+    <echo>
+      Cleaning ....... (add your cleaning steps here)
+    </echo>
+  </target>
+
+  
+  <target name="prepare" >
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+    <xproc-src src="conf/generate-ivy-dependency-file.xpl" />
+
+  </target>
+
+  <target name="build" >
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+  </target>
+
+<target name="test" >
+  <xslt style="test/xsl/test.xsl"
+	basedir="test/data"
+	destdir="build" 
+	includes="*.xml"
+	extension=".fods"
+	/>
+</target>
+
+<target name="package" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="arousa-package" />
+  </target>
+
+  <target name="dist" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="arousa-package" />
+    <antcall target="arousa-publish-dependency" />
+  </target>
+</project>
+

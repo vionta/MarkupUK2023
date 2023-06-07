@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="1.1"
+            xmlns:arimp="http://www.vionta.net/schemas/arousa-import/v1.0/arousa-import.xsd">
+   <info organisation="org.markupuk.examples.arousa"
+         module="sample-fods-report"/>
+   <configurations>
+      <conf name="default"/>
+   </configurations>
+   <publications/>
+   <dependencies defaultconf="default">
+      <dependency org="net.vionta.transformation.spreadsheet"
+                  name="lineal-fods"
+                  rev="1.0">
+         <artifact name="build-tasks-report"
+                   type="transformation"
+                   ext="xsl"/>
+         <artifact name="fods-vertical"
+                   type="transformation"
+                   ext="xsl"/>
+         <artifact name="fods-frame"
+                   type="transformation"
+                   ext="xsl"/>
+      </dependency>
+   </dependencies>
+</ivy-module>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sample-fods-report" basedir="." default="build">
+
+  <!-- Arousa Configuration directory -->
+  <property name="config.dir" value="conf"></property>
+
+  <!-- Main build properties -->
+  <property file="${config.dir}/build.properties" ></property>
+
+  <!-- Arousa build properties -->  
+  <import file="${config.dir}/arousa-build.xml" />
+
+  <!-- Xproc Import III  -->
+  <import file="${config.dir}/xproc.xml" /> 
+  
+  
+
+  <target name="prepare" >
+    <echo>
+      Updating ivy file
+    </echo>
+    <xproc-src src="conf/generate-ivy-dependency-file.xpl" />
+  </target>
+
+  
+  <target name="test" >
+    <xslt style="src/xsl/test.xsl"
+	basedir="test/data"
+	destdir="build" 
+	includes="*.xml"
+	extension=".fods"
+	/>
+  </target>
+
+
+  <target name="build" >
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+    <xproc-src src="conf/generate-ivy-dependency-file.xpl" />
+  </target>
+  
+<target name="package" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="arousa-package" />
+  </target>
+
+  <target name="dist" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="arousa-package" />
+    <antcall target="arousa-publish-dependency" />
+  </target>
+</project>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivysettings>
+  <property name="ivy.local.default.root" value="${ivy.default.ivy.user.dir}/local" override="false"/>
+
+  <settings defaultResolver="local"/>
+  <resolvers>
+    <chain name="local">
+      <filesystem name="local-arousa" m2compatible="true" >
+	<ivy pattern="${local-arousa-pattern}"/>
+	<artifact pattern="${local-arousa-pattern}"/>
+      </filesystem>
+    </chain>
+  </resolvers>
+</ivysettings>
