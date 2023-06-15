@@ -1,0 +1,29 @@
+<ivy-module version="1.1">
+
+  <!--  ...... Enter the group and name of the project ... -->
+  <info organisation="net.vionta.reports.jira"
+	module="jira-report"/>
+
+  <configurations>
+    <conf name="default" />
+    <conf name="red-report" extends="default" />
+    <conf name="blue-report" extends="default" />
+  </configurations>
+
+  <publications>
+    <artifact name="jira-report" type="transformations" ext="zip" conf="*"/>
+  </publications>
+  
+  <dependencies defaultconf="default">
+    <dependency org="org.markupuk.examples.arousa" name="blue-report-theme" rev="1.0" conf="blue-report->default" >
+      <artifact name="blue-report-theme" type="transformations" ext="zip" />
+    </dependency>
+    <dependency org="org.markupuk.examples.arousa" name="red-report-theme" rev="1.0" conf="red-report->default" >
+      <artifact name="red-report-theme" type="transformations" ext="zip" />
+    </dependency>
+    <dependency org="org.markupuk.examples.arousa" name="html-essentials" rev="1.0" >
+      <artifact name="html-essentials" type="transformations" ext="zip" />
+    </dependency>
+  </dependencies>
+  
+</ivy-module>

@@ -1,0 +1,6 @@
+
+
+source bajar-comun.sh
+
+
+jiraexport "project+%3D+ITSM-eCommerce+AND+%28reporter+in+%28jesusego%2C+rubenbse%2C+santiagoagb%2C+diegovsil%2C+susanafab%2C+carloszz%2C+manuelbve%2C+adrianpfer%2C+albacgar%2C+alexandrelv%2C+AnaFF%2C+AnabelVC%2C+belindamd%2C+carmenmcf%2C+cristinalg%2C+cristinaldm%2C+davidpse%2C+estefaniacb%2C+franciscojta%2C+franciscomr%2C+glaucob%2C+hirokos%2C+mariaafga%2C+ortzisig%2C+tatianalspk%2C+ursulare%2C+victorama%2C+youngjch%2C+ritat%2C+brianw%2C+bolu%2C+raquelbde%2C+belenac%2C+carlasca%2C+guillermorc%2C+pablopla%2C+sergiomot%2C+lauraef%2C+soniasg%2C+carmenso%2C+olgakli%2C+RosaVs%2C+alejandragfer%2C+rubits%2C+elisagan%2C+noelialpr%2C+noanfp%2C+mercedesfca%2C+inessi%2C+mariaeri%2C+santiagosme%2C+damarisal%2C+jeniferfs%2C+gemambo%2C+albasgar%29+OR+%22Equipo+Asignado%22+in+%28jsdnegociozhcomercial%2C+jsdnegociozhimagen%2C+jsdnegociozhmarketing%2C+jsdnegociozhoperacionesyproyectos%2C+itcadenazh%29%29+AND+status+not+in+%28Resolved%2C+Cancelled%2C+Closed%2C+Resuelto%2C+Cancelado%2C+Cerrado%2C+%22informaci%C3%B3n+solicitada%22%29+AND+%22Equipo+Asignado%22+not+in+%28itcadenazh%2C+jsdnegociozhimagen%29+AND+%22Equipo+Asignado%22+not+in+%28itcadenazh%2C+jsdfilial%2C+jsdnegociozhimagen%2C+jsdadmin%2C+jsdopsoportesga%2C+jsdnegociozhmarketing%29+ORDER+BY+created+DESC%2C+updatedDate+DESC&tempMax=1000" "INFORMESD"

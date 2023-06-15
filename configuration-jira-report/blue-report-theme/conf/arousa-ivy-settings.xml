@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivysettings>
+  <settings defaultResolver="demo"/>
+  <property name="demo.samples.repository.root"
+	    value="${user.home}/dev/ws/arousaws/arousa-examples/configuration-jira-report/repository" override="false"/>
+  <property name="demo-arousa-pattern"
+	    value="[organisation]/[module]/[type]/[revision]/[module]-[revision].[ext]"
+	    override="true" />
+  <!-- ........... VWe ar not using this two properties ............ -->
+  <property name="ivy.local.default.root"
+            value="${ivy.default.ivy.user.dir}/local" override="false"/>
+  <property name="local-arousa-pattern"
+	    value="${user.home}/.arousa/repository/[organisation]/[module]/[type]/[revision]/[module]-[revision].[ext]"
+	    override="true" />
+  <!-- ........... VWe ar not using this two properties ............ -->
+  <resolvers>
+    <chain name="demo">
+      <filesystem name="arousa-demo" m2compatible="true" >
+	<ivy pattern="${demo.samples.repository.root}/${demo-arousa-pattern}"/>
+	<artifact pattern="${demo.samples.repository.root}/${demo-arousa-pattern}"/>
+      </filesystem>
+    </chain>
+    <chain name="local">
+      <filesystem name="local-arousa" m2compatible="true" >
+	<ivy pattern="${local-arousa-pattern}"/>
+	<artifact pattern="${local-arousa-pattern}"/>
+      </filesystem>
+    </chain>
+  </resolvers>
+  
+</ivysettings>

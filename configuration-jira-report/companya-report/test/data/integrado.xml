@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'iso-8859-1' standalone = 'no' ?>
+<rss version="0.92">
+  <channel>
+    
+
+
+    <item>
+      <title>[PESA001-1128] [jmedo]Usuario no puede ejecutar pipelines</title>
+      <link>https://pruebatrick.com/browse/PESA001-1128</link>
+      <project id="10809" key="PESA001">PIPOPGP_DESARROLLO</project>
+      <description>&lt;p&gt;Buenos dias, no puedo ejecutar pipelines de las aplicaciones que llevo. Adjunto pantallazo de error al intentar hacer pipeline. El error es:&lt;/p&gt;
+
+      &lt;p&gt;-We could not find a suscription assigned to this&#160; user.&lt;/p&gt;
+
+      &lt;p&gt;&#160;&lt;/p&gt;</description>
+      <environment></environment>
+      <key id="161980">PESA001-1128</key>
+      <summary>[jmedo]Usuario no puede ejecutar pipelines</summary>
+      <type id="10108" iconUrl="https://pruebatrick.com/secure/viewavatar?size=xsmall&amp;avatarId=10308&amp;avatarType=issuetype">Incidencia</type>
+      <priority id="1" iconUrl="https://pruebatrick.com/images/icons/priorities/highest.svg">Urgente</priority>
+      <status id="3" iconUrl="https://pruebatrick.com/images/icons/statuses/closed.png" description="The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.">Backlog</status>
+      <statusCategory id="2" key="doing" colorName="green"/>
+      <resolution id="10002">Desarrollo</resolution>
+      <assignee username="malonsor@zblur.com">Fernandez Gonzalez, Catalina</assignee>
+      <reporter username="AREA_DESARROLLO_COMERCIO_3">AREA_DESARROLLO_COMERCIO_3</reporter>
+      <created>Mon, 27 Feb 2023 13:01:13 +0100</created>
+      <updated>Fri, 31 Mar 2023 08:26:34 +0200</updated>
+      <resolved>Fri, 31 Mar 2023 08:26:34 +0200</resolved>
+      <due></due>
+      <watches>7</watches>
+      <timespent seconds="281">4 minutes</timespent>
+      <comments>
+      </comments>
+      <issuelinks>
+        <issuelinktype id="10003">
+          <name>Relacionada</name>
+          <inwardlinks description="Relacionada con">
+            <issuelink>
+              <issuekey id="163534">SOPESA-41757</issuekey>
+            </issuelink>
+          </inwardlinks>
+        </issuelinktype>
+      </issuelinks>
+      <attachments>
+      </attachments>
+      <subtasks>
+      </subtasks>
+      <customfields>
+
+      </customfields>
+    
+    </item>
+
+
+    <item>
+      <title>[PESA001-1121] Cambio de grupo de jira de &#233;pica</title>
+      <link>https://pruebatrick.com/browse/PESA001-1121</link>
+      <project id="10809" key="PESA001">PIPOPGP_DESARROLLO</project>
+      <description>&lt;p&gt;Buenos d&#237;as,&lt;/p&gt;
+
+      &lt;p&gt;Por favor, necesitamos cambiar el grupo Jira de la nueva &#233;pica creada para el nuevo expediente:&#160;&#160;&lt;/p&gt;
+
+</description>
+      <environment></environment>
+      <key id="163542">PESA001-1121</key>
+      <summary>Cambio de grupo de jira de &#233;pica</summary>
+      <type id="10107" iconUrl="https://pruebatrick.com/secure/viewavatar?size=xsmall&amp;avatarId=10306&amp;avatarType=issuetype">Petici&#243;n</type>
+      <priority id="3" iconUrl="https://pruebatrick.com/images/icons/priorities/medium.svg">Media</priority>
+      <status id="3" iconUrl="https://pruebatrick.com/images/icons/statuses/closed.png" description="The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.">Backlog</status>
+      <statusCategory id="2" key="doing" colorName="green"/>
+      <resolution id="10002">Desarrollo</resolution>
+      
+      <assignee username="malonsor@zblur.com">Fernandez Gonzalez, Catalina</assignee>
+      <reporter username="AREA_DESARROLLO_INDUSTRIA_2">AREA_DESARROLLO_INDUSTRIA_2</reporter>
+      <created>Fri, 3 Mar 2023 11:29:49 +0100</created>
+      <updated>Mon, 27 Mar 2023 17:26:33 +0200</updated>
+      <resolved>Mon, 27 Mar 2023 17:26:33 +0200</resolved>
+      <due></due>
+      <watches>4</watches>
+      <timespent seconds="1800">30 minutes</timespent>
+      <comments>
+
+      </comments>
+      <attachments>
+
+      </attachments>
+      <subtasks>
+      </subtasks>
+      <customfields>
+
+      </customfields>
+    </item>
+
+
+    <item>
+      <title>[PESA001-1120] Alta Usuarios en PDA - Energia</title>
+      <link>https://pruebatrick.com/browse/PESA001-1120</link>
+      <project id="10809" key="PESA001">PIPOPGP_DESARROLLO</project>
+      <description>&lt;p&gt;Buenas tardes,&lt;/p&gt;
+
+      &lt;p&gt;Solicitamos acceso a PDA a los siguientes usuarios del equipo de desarrolladores de Initech&lt;/p&gt;
+</description>
+      <environment></environment>
+      <key id="163363">PESA001-1120</key>
+      <summary>Alta Usuarios en PDA - Energia</summary>
+      <type id="10107" iconUrl="https://pruebatrick.com/secure/viewavatar?size=xsmall&amp;avatarId=10306&amp;avatarType=issuetype">Petici&#243;n</type>
+      <priority id="3" iconUrl="https://pruebatrick.com/images/icons/priorities/medium.svg">Media</priority>
+<status id="6" iconUrl="https://pruebatrick.com/images/icons/statuses/closed.png" description="The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.">Cerrada</status>
+      <statusCategory id="3" key="done" colorName="green"/>
+      <resolution id="10005">Cerrada</resolution>
+      
+      <assignee username="malonsor@zblur.com">Fernandez Gonzalez, Catalina</assignee>
+      <reporter username="afernandezm@zblur.com">Perez Garcia, Antonio</reporter>
+      <created>Thu, 2 Mar 2023 17:38:20 +0100</created>
+      <updated>Mon, 27 Mar 2023 09:43:37 +0200</updated>
+      <resolved>Mon, 27 Mar 2023 09:43:37 +0200</resolved>
+      <due></due>
+      <watches>5</watches>
+      <timespent seconds="900">15 minutes</timespent>
+      <comments>
+
+      </comments>
+      <attachments>
+      </attachments>
+      <subtasks>
+      </subtasks>
+      <customfields>
+
+      </customfields>
+    </item>
+
+
+    <item>
+      <title>[PESA001-1118] Inclusi&#243;n de usuarios CAU en distintos grupos Jira de CAU</title>
+      <link>https://pruebatrick.com/browse/PESA001-1118</link>
+      <project id="10809" key="PESA001">PIPOPGP_DESARROLLO</project>
+      <description>&lt;p&gt;Buenas tardes,&#160;&lt;/p&gt;
+
+      &lt;p&gt;Para alinear los perfiles de Jira del personal de CAU con la organizaci&#243;n del servicio, necesitamos incorporar a los siguientes T&#233;cnicos CAU en los siguientes grupos Jira, de forma que pertenezcan a los que lo hacen actualmente y, adem&#225;s:&#160;&lt;/p&gt;
+      &lt;ul&gt;
+      &lt;li&gt;Incluir al TECNICO CAU 001 en los siguientes grupos de jira: jira-CAU-CAST, jira-CAU OPDA, jira CAU-PJM, jira-CAU-Telefonia fija CAST, jira-CAU-Telefonia fija PJM, jira-CAU-Telefon&#237;a M&#243;vil, jira-CAU-Service Desk,.&lt;/li&gt;
+      &lt;li&gt;Incluir al TECNICO CAU 027 en el siguiente grupo de jira: jira-CAU OPDA.&lt;/li&gt;
+      &lt;li&gt;Incluir al TECNICO CAU 018 en el siguiente grupo de jira: jira-CAU-Telefon&#237;a M&#243;vil.&lt;/li&gt;
+      &lt;/ul&gt;
+
+
+      &lt;p&gt;Muchas gracias,&lt;/p&gt;
+
+      &lt;p&gt;Un saludo.&lt;/p&gt;</description>
+      <environment></environment>
+      <key id="163337">PESA001-1118</key>
+      <summary>Inclusi&#243;n de usuarios CAU en distintos grupos Jira de CAU</summary>
+      <type id="10107" iconUrl="https://pruebatrick.com/secure/viewavatar?size=xsmall&amp;avatarId=10306&amp;avatarType=issuetype">Petici&#243;n</type>
+      <priority id="3" iconUrl="https://pruebatrick.com/images/icons/priorities/medium.svg">Media</priority>
+
+<status id="6" iconUrl="https://pruebatrick.com/images/icons/statuses/closed.png" description="The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.">Cerrada</status>
+      <statusCategory id="3" key="done" colorName="green"/>
+      <resolution id="10005">Cerrada</resolution>
+      <assignee username="malonsor@zblur.com">Fernandez Gonzalez, Catalina</assignee>
+      <reporter username="LFlores@zblur.com">T&#233;cnico Gobierno TI CAU</reporter>
+      <created>Thu, 2 Mar 2023 16:44:28 +0100</created>
+      <updated>Tue, 21 Mar 2023 09:42:40 +0100</updated>
+      <resolved>Tue, 21 Mar 2023 09:42:40 +0100</resolved>
+      <due></due>
+      <watches>3</watches>
+      <timespent seconds="900">15 minutes</timespent>
+      <comments>
+        <comment id="379054" author="JIRAUSER42394" created="Fri, 3 Mar 2023 10:12:03 +0100"  >&lt;p&gt;&lt;a href=&quot;https://pruebatrick.com/secure/ViewProfile.jspa?name=LFlores%40zblur.com&quot; class=&quot;user-hover&quot; rel=&quot;LFour@zblur.com&quot;&gt;T&#233;cnico Gobierno TI CAU&lt;/a&gt;,&lt;/p&gt;
+
+	&lt;p&gt;&#160;&lt;/p&gt;
+	</comment>
+
+      </comments>
+      <attachments>
+      </attachments>
+      <subtasks>
+      </subtasks>
+      <customfields>
+	
+      </customfields>
+    </item>
+
+  </channel>
+</rss>

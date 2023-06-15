@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="companya-report" basedir="." default="build">
+
+  <!-- Arousa Configuration directory -->
+  <property name="config.dir" value="conf"></property>
+
+  <!-- Main build properties -->
+  <property file="${config.dir}/build.properties" ></property>
+
+  <!-- Arousa build properties -->  
+  <import file="${config.dir}/arousa-build.xml" />
+
+  <!-- Xproc Import -->
+  <!-- XProc III Import 
+       Enable this import and adjust the Morgana XProc III Path 
+       in order to use xproc III
+  -->
+       <import file="${config.dir}/xproc.xml" /> 
+  
+  <!-- 
+       XProc I with NW Calabash
+       <import file="${config.dir}/calabash.xml"/>
+       Curl Helper macros 
+       <import file="${config.dir}/curl.xml"/>
+  -->
+
+  <target name="help"  >
+    <echo>
+      Main Targets : clean, build 
+    </echo>
+  </target>
+
+  <target name="clean"  >
+    <echo>
+      Cleaning ....... (add your cleaning steps here)
+    </echo>
+  </target>  
+
+    <target name="prepare-2" >
+    <xslt style="deps/jira-report/xsl/jira-xmlize-structure.xsl"
+	  basedir="test/data"
+	  includes="*.xml"
+	  destdir="temp/data.1"
+	  extension="-data.xml"
+	  >
+    </xslt>
+
+    <xproc src="deps/jira-report/xpl/truncate-jira-rss-file-to-individual.xpl" doc="temp/data.1/integrado-data.xml" />
+
+    <xproc-src src="deps/jira-report/xpl/reindex-individual-jira-files.xpl" />
+  </target>
+  
+  <target name="build" depends="prepare-2" >
+
+    <copy todir="build" >
+      <fileset dir="src/resources" >
+        <include name="**" />
+      </fileset>
+    </copy>
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+
+    <xslt style="deps/jira-report/xsl/jira-item-list.xsl"
+	  basedir="build"
+	  includes="integrado.xml"
+	  destdir="temp/data.2"
+	  extension=".xml"
+	  >
+    </xslt>
+
+    <xslt style="deps/jira-report/xsl/jira-item-list-open.xsl"
+	  basedir="build"
+	  includes="reindexado.xml"
+	  destdir="temp/data.2"
+	  extension="-open.xml"
+	  />
+
+    <xslt style="deps/jira-report/xsl/jira-item-list.xsl"
+	  in="build/reindexado.xml"
+	  out="temp/data.2/integrado-tot.xml"
+	  >
+    </xslt>
+
+    <xslt style="deps/jira-report/xsl/jira-item-list-open.xsl"
+	  in="build/reindexado.xml"	
+	  out="temp/data.2/integrado-open.xml"
+	  />
+
+    <xslt style="deps/jira-report/xsl/jira-item-list-rev.xsl"
+	  in="build/reindexado.xml"	
+	  out="temp/data.2/integrado-open-rev.xml"
+	  />
+    
+    <xslt style="deps/html-essentials/xsl/html-report-basic-structure.xsl"
+	  basedir="temp/data.2"
+	  includes="*.xml"
+	  destdir="temp/data.4"
+	  extension=".xml"
+	  />
+
+    
+    <xslt style="deps/html-essentials/xsl/html-visual-page-frame.xsl"
+	  basedir="temp/data.4"
+	  includes="*.xml"
+	  destdir="build"
+	  extension="e.html"
+	  />
+    
+  </target>
+  
+  <target name="build-old" >
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+    <!-- Simple Xslt example........... -->
+
+    <xslt style="deps/jira-report/xsl/jira-item-list-open.xsl"
+	  in="data/integrado.xml"
+	  out="build/integrado.html" >
+      <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+    </xslt>
+
+    <xslt style="deps/jira-report/xsl/jira-xmlize-structure.xsl"
+	  in="data/integrado.xml"
+	  out="build/integrado-xmlizado.xml" >
+    
+    </xslt>
+    
+    <xslt style="deps/jira-report/xsl/jira-item-list-open.xsl"
+	  in="build/integrado-xmlizado.xml"
+	  out="build/integrado-xmlizado-out.xml" >
+    
+    </xslt>
+
+    <xslt style="deps/html-essentials/xsl/html-report-basic-structure.xsl"
+	  in="build/integrado-xmlizado-out.xml"
+	  out="build/integrado-xmlizado-out.html" >
+    </xslt>
+
+    <xslt style="deps/html-essentials/xsl/html-visual-page-frame.xsl"
+	  in="build/integrado-xmlizado-out.html"
+	  out="build/integrado-xmlizado-out-2.html" >
+    </xslt>
+
+
+  </target>
+
+  
+  <target name="package" >
+    <antcall target="arousa-package" />
+  </target>
+
+  <target name="dist" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="package" />
+    <antcall target="arousa-publish-dependency" />
+  </target>
+</project>
+

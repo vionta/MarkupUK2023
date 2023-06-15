@@ -1,0 +1,287 @@
+
+@viewport {
+    width: device-width;
+    height: device-height;
+}
+
+/* ******************* Genericas  *************************/
+
+body {
+    font-family: Verdana, Arial, Helvetia;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Verdana, Helvetia;
+    margin-top:45px;
+    margin-bottom:55px;
+}
+
+h2{
+    margin: 0;
+    padding: .5em 2em;
+    margin-top:45px;   
+    margin-bottom:30px;
+/*    padding : 15px  ;  
+    min-width: 150px ;
+    width : 100% ; */
+    background-color: #b03333;
+    color: white;
+    font-weight: 900;
+}
+
+
+h3, h4 {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+/* ******************* Tablas   *************************/
+
+table {
+}
+
+td {
+}
+
+td.texto {
+    max-width:400px ;
+}
+
+th {
+}
+
+th.empty {
+    background-color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) td {
+    background-color: #e9e9e9;
+}
+
+
+tr { }
+
+
+/* ******************* Tablas, sumario  *************************/
+table.summary {
+    width:80%;
+}
+
+
+table.summary td.small-text, td.small-text {
+    text-align: left;
+}
+
+table.summary td,th {
+    padding:15px;
+    border: 2px solid white;
+    margin:0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+table.summary th {
+    background-color: #b03333;
+    color: white;
+    font-weight: 900;
+    font-size : 80%
+}
+
+table.summary th.empty ,  table.smallsummary th.empty   {
+    background-color :transparent;
+    border: 2px solid transparent;
+}
+
+/* ******************* Tablas, smallsummary *************************/
+table.smallsummary {
+    /*
+					width:80%;
+   */
+    font-size : 80%
+}
+
+table.smallsummary td,th {
+    padding:10px;
+    border: 2px solid white;
+    margin:0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.small-text, table.smallsummary td.small-text,table.datalist td.small-text {
+    text-align: left;
+}
+
+
+table.smallsummary th {
+    background-color: #b0b0b0;
+    color: black;
+    font-weight: 900;
+
+}
+
+/* ******************* Tablas, datalist *************************/
+table.datalist {
+    max-width:500px;
+    font-size : 80%
+}
+
+table.datalist td,th  {
+    padding:10px;
+    border: 2px solid white;
+    margin:0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+table.datalist th  {
+    font-family: Verdana, Arial, Helvetia;
+    font-weight: 900;
+    background-color: #b0b0b0;
+    color: black;
+}
+
+img.status-icon {
+    width: 18px ;
+    margin-left: 2px ;
+    margin-right : 4px ; 
+}
+
+span.label {
+    display: inline-block;
+    margin-right: 2px;
+    border-radius: 4px;
+    padding: 2px;
+    border: 2px solid #bbb;
+}
+
+/* ******************* Secciones *************************/
+div.section {
+    background: url("../../static/img/fondo-report.svg") ;
+    display : block;
+    width :100%;
+    padding : 10%;
+    clear:both;
+}
+
+
+
+div.section h2,div.section >  h2 {
+    margin: 0;
+    padding: 10% ;
+    margin-top: 1em ; 
+    margin-bottom:1em;
+    background-color: transparent;
+    color: black;
+    font-weight: 900;
+}
+
+
+h3, h4 {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+div.sectioncontent {
+    background: url("../../static/img/fondo-report.svg") ;
+    display : block;
+    width :100%;
+    padding :3% ;
+    clear:both;
+}
+
+.change-request-detail {
+    display : block;
+    width :90%;
+    position : relative;
+    left  : 20 px ;
+    top : 40 px;
+}
+
+.horizontal-bag{
+    display: block ;
+
+    maximum-width : 95% ;
+    background: transparent;
+    padding : 0%;
+
+    clear: both ;
+}
+
+.2-col-distribution col2  col3  div.col2 {
+    display: block ;
+}
+
+.2-col-distribution-left {
+    display: block ;
+    width : 48% ;
+    maximum-width : 48% ;
+    minimum-width : 48% ;
+    /*
+					border: 2px solid black;
+								border: 2px solid black;
+									border:2px solid silver ; 
+										   	 	  border:2px solid silver ;
+   */
+}
+
+
+.2-col-distribution-right {
+    display: block ;
+    width : 48% ;
+    maximum-width : 48% ;
+    minimum-width : 48% ;
+    /*
+				border:2px solid silver ;
+   */
+}
+
+.vpart  {
+
+    float:left;
+    clear : none;
+    margin:20px;
+    /*
+				border: 2px solid black;
+							display: inline-block;
+											position:relative;
+															border:3px solid silver ; 
+																   	 	  margin:30px;
+																						min-witdh: 20% ; */
+}
+
+/*
+				col2 .vpart[1] {
+								width:25%
+													border:3px solid silver ; 
+														   	 	  }
+*/
+
+/*
+				col2 .vpart[2] {
+								width:65%
+													border:3px solid silver ;	
+														   	 		}
+*/
+
+.refsmin{
+    font-size: small ;
+}
+
+#footer {
+    clear: both;
+    margin: 0;
+    padding: .5em 2em;
+    color: gray;
+    background-color: gainsboro;
+    font-size: 80%;
+    border-top: 1px dotted gray;
+    text-align: right
+}
+

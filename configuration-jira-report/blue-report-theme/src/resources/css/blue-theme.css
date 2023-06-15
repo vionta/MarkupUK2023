@@ -1,0 +1,187 @@
+
+
+:root {
+    --main-space: 2em; 
+    --small-space:1em;
+    --double-space:4em;
+
+    --main-color:#050712;
+    --remark-color:#151720;
+    --second-remark-color:#151766;
+
+    
+    
+    
+    
+}
+
+body {
+    margin: 0;
+    height: auto;	
+    font: normal 80%/120% Arial, Helvetica, sans-serif;
+}
+
+/**
+=========================================
+	Content
+=========================================
+*/
+header {
+	margin: 0;
+	margin-left: var(--main-space);
+	padding: var(--main-space);
+	background: linear-gradient(to top, #fafafa , #ffffff );
+}
+
+
+content, main {
+    margin: 0;
+    margin-left: var(--main-space);
+    margin-right: var(--main-space);
+    padding: var(--main-space);
+    padding-top:0;
+}
+
+footer {
+	clear: both;
+	margin: 0;
+	margin-top:var(--double-space);
+	padding: var(--double-space);
+	margin-bottom:0;
+	color: white;
+	font-size: 110%;
+	border-top: 3px solid gainsboro;
+	text-align: middle;
+	text-shadow: 0 1px 1px silver;
+/* background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+*/
+background: linear-gradient(to bottom,rgb(33,33,40) , rgb(60,60,80));
+}
+
+
+/* footer * {
+    float: left;
+    width : 30%;
+    padding: var(--double-space);
+    background-color: gray;
+	
+}
+*/
+
+/**
+=========================================
+	Label / value
+=========================================
+*/
+
+.page {
+	border-bottom: 3px dotted navy;
+	margin: 0;
+	padding: 10px 0 20px 0;
+}
+
+
+.label {
+	float: left;
+	width: 140px;
+	text-align: right;
+	font-weight: bold;
+	padding-bottom: .5em;
+	margin-right: 0;
+	color: darkblue;
+}
+
+
+
+
+/**
+=========================================
+	Links
+=========================================
+*/
+
+a:link,
+a:visited {
+	color: blue;
+	margin-left: 10px;
+	border-bottom: 1px dotted blue;
+	text-decoration: none;
+	font-style: italic;
+}
+
+a:hover {
+	background-color: gainsboro;
+	color: darkblue;
+	padding-bottom: 1px;
+	border-bottom: 1px solid darkblue;
+}
+
+a:link,
+a:visited,
+a:hover
+{
+	text-decoration: none;
+	background-color: transparent;
+	border-bottom-type: none;
+}
+
+
+
+/**
+=========================================
+	Heading
+=========================================
+*/
+h1, h2, h3 {
+	font-family: Arial, Sans-Serif;
+	font-weight: bold;
+	color: darkblue;
+	}
+
+
+h1 {
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-size: 220%;
+	line-height: 100%;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 175%;
+	line-height: 100%;
+}
+
+h3 {
+	font-size: 150%;
+	line-height: 100%;
+	font-style: italic;
+}
+
+table {
+    margin-bottom:var(--double-space);
+}
+
+th {
+    background: linear-gradient(to bottom,#ffffff  , #f3f3f3);
+    background-color:#f0f0f0;
+    font-weight:900;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 0.3px solid #bbbbcd;
+}
+
+tr:nth-child(even) td{
+    background: linear-gradient(to bottom,#ffffff  , #fefeff);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+tr:nth-child(odd) td{
+    background: linear-gradient(to bottom,#fbfbfb , #fafafa);    
+
+    
+}
+

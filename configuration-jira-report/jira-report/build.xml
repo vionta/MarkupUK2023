@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jira-report" basedir="." default="build" xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+  <!-- Arousa Configuration directory -->
+  <property name="config.dir" value="conf"></property>
+  <property name="debug" value="true"></property>
+
+  <!-- Main build properties -->
+  <property file="${config.dir}/build.properties" ></property>
+
+  <!-- Arousa build properties -->  
+  <import file="${config.dir}/arousa-build.xml" />
+
+  <!-- Xproc Import III  -->
+  <import file="${config.dir}/xproc.xml" /> 
+  
+  <target name="help"  >
+    <echo>
+      Main Targets : clean, build 
+    </echo>
+  </target>
+
+  <target name="clean"  >
+    <echo>
+      Cleaning ....... (add your cleaning steps here)
+    </echo>
+
+    <delete dir="temp.data" unless:set="debug" /> 
+  </target>
+
+  <target name="prepare"  >
+    <copy todir="build" >
+      <fileset dir="src" >
+        <include name="css/**" />
+      </fileset>
+    </copy>
+    <antcall target="arousa-update-dependencies" />
+  </target>
+
+  <target name="prepare-2" >
+    <xslt style="src/xsl/jira-xmlize-structure.xsl"
+	  basedir="test/data"
+	  includes="*.xml"
+	  destdir="temp/data.1"
+	  extension="-data.xml"
+	  >
+    </xslt>
+
+    <xproc src="src/transformations/xpl/truncate-jira-rss-file-to-individual.xpl" doc="temp/data.1/integrado-data.xml" />
+
+    <xproc-src src="src/transformations/xpl/reindex-individual-jira-files.xpl" />
+  </target>
+  
+  <target name="build" depends="prepare-2" >
+
+    <echo>
+      Building  ....... (add your xproc/xslt/etc. steps here)
+    </echo>
+
+    <xslt style="src/xsl/jira-item-list.xsl"
+	  basedir="build"
+	  includes="integrado.xml"
+	  destdir="temp/data.2"
+	  extension=".xml"
+	  >
+    </xslt>
+
+    <xslt style="src/xsl/jira-item-list-open.xsl"
+	  basedir="build"
+	  includes="reindexado.xml"
+	  destdir="temp/data.2"
+	  extension="-open.xml"
+	  />
+
+    <xslt style="src/xsl/jira-item-list.xsl"
+	  in="build/reindexado.xml"
+	  out="temp/data.2/integrado-tot.xml"
+	  >
+    </xslt>
+
+    <xslt style="src/xsl/jira-item-list-open.xsl"
+	  in="build/reindexado.xml"	
+	  out="temp/data.2/integrado-open.xml"
+	  />
+
+    <xslt style="src/xsl/jira-item-list-rev.xsl"
+	  in="build/reindexado.xml"	
+	  out="temp/data.2/integrado-open-rev.xml"
+	  />
+    
+    <xslt style="deps/html-essentials/xsl/html-report-basic-structure.xsl"
+	  basedir="temp/data.2"
+	  includes="*.xml"
+	  destdir="temp/data.4"
+	  extension=".xml"
+	  />
+
+    
+    <xslt style="deps/html-essentials/xsl/html-visual-page-frame.xsl"
+	  basedir="temp/data.4"
+	  includes="*.xml"
+	  destdir="build"
+	  extension="e.html"
+	  />
+    
+  </target>
+  
+  
+  <target name="package" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="arousa-package" />
+  </target>
+
+  <target name="dist" >
+    <echo>Distributing project as an arousa dependency</echo>
+    <antcall target="arousa-package" />
+    <antcall target="arousa-publish-dependency" />
+  </target>
+</project>
+

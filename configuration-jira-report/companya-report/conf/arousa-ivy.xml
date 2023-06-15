@@ -1,0 +1,29 @@
+<ivy-module version="1.1">
+
+  <!--  ...... Enter the group and name of the project ... -->
+  <info organisation="org.markupuk.examples.arousa"
+	module="companya-report"/>
+
+  <configurations>
+    <conf name="default" />
+  </configurations>
+
+  <publications>
+    <artifact name="companya-report" type="transformations" ext="zip" conf="default"/>
+  </publications>
+  
+  <dependencies defaultconf="default">
+    
+    <dependency org="net.vionta.reports.jira" name="jira-report" rev="1.0" conf="default->blue-report" >
+      <artifact name="jira-report" type="transformations" ext="zip" />
+    </dependency>
+    <!-- Use this to use the red report 
+	
+    <dependency org="net.vionta.reports.jira" name="jira-report" rev="1.0" conf="default->red-report" >
+      <artifact name="jira-report" type="transformations" ext="zip" />
+    </dependency>
+    -->
+    
+  </dependencies>
+  
+</ivy-module>
